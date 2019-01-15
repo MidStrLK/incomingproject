@@ -1,0 +1,80 @@
+@import "../../styles/palette";
+@import "../../styles/dimensions";
+
+.user-button-div{
+  //position: absolute;
+  //top: 10px;
+  //right: 50px;
+
+  height: 51px;
+  //overflow: hidden;
+  line-height: 51px;
+
+  >.user-button-span{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    margin: 4px 20px 0 0;
+    color: $userbutton-color;
+    //border-bottom: 1px dashed $languagebutton-color;
+    cursor: pointer;
+    float: right;
+    text-decoration: underline;
+
+    &:hover{
+      color:$userbutton-color-hover;
+    }
+  }
+}
+
+.userbutton-hover{
+  z-index: $z-index-filter-modal + 1;
+  >span{
+    color: black !important;
+    border-bottom: 1px dashed black !important;
+  }
+}
+
+
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  z-index: $z-index-filter-modal;
+
+  .modal-content{
+    //height: 200px;
+    width: 400px;
+    float:right;
+    background-color: white;
+    padding: 10px;
+    //margin: $user-margin-top 10px 0 0;
+
+    .user-name-div{
+      height: $header-height;
+    }
+
+    .user-name-span{
+      font-family: Roboto, sans-serif;
+      font-size: 20px;
+    }
+
+    .exit-div{
+      float: right;
+      padding-top:30px;
+      border-bottom: 1px dashed $languagebutton-color;
+      margin: 10px;
+      cursor: pointer;
+
+      .exit-span{
+        &:hover{
+          color:blue;
+        }
+      }
+    }
+  }
+}

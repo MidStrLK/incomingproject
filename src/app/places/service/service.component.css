@@ -1,0 +1,82 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+/* HEIGHTS */
+/* Z-INDEXES */
+/* FILTERS */
+/* FILTER-INPUT */
+/* SERVICES-MENU */
+/* USER */
+.rightClickPanel {
+  position: absolute;
+  z-index: 4;
+  display: block; }
+  .rightClickPanel > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+    .rightClickPanel > ul > li {
+      width: 100%;
+      height: 40px;
+      background-color: #0097A7;
+      color: #FFFFFF;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      text-align: left;
+      padding: 0 15px;
+      line-height: 40px; }
+      .rightClickPanel > ul > li:hover {
+        background-color: #00BCD4;
+        color: #FFFFFF; }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: transparent;
+  z-index: 5; }
+
+/*
+.service-button {
+  cursor: pointer;
+  color: $filter-button-text-color;
+  background-color: $filter-button-background-color;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: color 0.2s ease;
+
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+
+  position: relative;
+  width: $filter-width;
+  z-index: $z-index-filter-button;
+  right: $filter-right;
+  height: $tab-height;
+}
+
+.service-button:hover{
+  background-color: $filter-button-background-color-hover;
+  color: $filter-button-text-color-hover;
+}
+*/
+
+/*# sourceMappingURL=service.component.css.map */

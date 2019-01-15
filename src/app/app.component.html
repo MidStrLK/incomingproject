@@ -1,0 +1,15 @@
+<auth-place *ngIf="!authService.authenticated" class="auth-place">
+</auth-place>
+
+<!--<languagebutton-place></languagebutton-place>-->
+
+<message_window></message_window>
+
+<loadmsg_place></loadmsg_place>
+
+<service-button-place></service-button-place>
+
+
+<div class="container" *ngIf="authService.authenticated">
+    <center-place></center-place>
+</div>

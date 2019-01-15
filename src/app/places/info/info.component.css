@@ -1,0 +1,79 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+.left-chart,
+.right-chart {
+  width: 50%;
+  height: 300px;
+  float: left; }
+
+.role {
+  margin: 20px; }
+  .role span {
+    font-size: 17px;
+    font-family: Roboto, sans-serif; }
+
+.info-top {
+  margin: 20px;
+  width: 100%;
+  height: 40px; }
+  .info-top .username-div {
+    float: left; }
+    .info-top .username-div .username-span {
+      font-size: 25px;
+      font-family: Roboto, sans-serif;
+      color: #757575;
+      text-decoration: underline; }
+  .info-top .exit-div {
+    float: left;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 4px; }
+    .info-top .exit-div:hover {
+      color: #0097A7;
+      border-radius: 5px;
+      border: 1px dashed #0097A7;
+      text-decoration: none; }
+
+.left-div,
+.right-div {
+  width: 50%;
+  float: left;
+  padding: 10px; }
+  .left-div .item-div,
+  .right-div .item-div {
+    background-image: linear-gradient(to left, transparent, transparent 50%, #B2EBF2 50%, #B2EBF2);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .20s ease-in; }
+    .left-div .item-div:hover,
+    .right-div .item-div:hover {
+      background-position: 0 0; }
+      .left-div .item-div:hover > td,
+      .right-div .item-div:hover > td {
+        color: #212121; }
+  .left-div .item-label,
+  .left-div .item-between,
+  .left-div .item-count,
+  .right-div .item-label,
+  .right-div .item-between,
+  .right-div .item-count {
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    padding: 7px;
+    color: #0097A7; }
+  .left-div .item-count,
+  .right-div .item-count {
+    text-align: right; }
+
+/*# sourceMappingURL=info.component.css.map */

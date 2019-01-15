@@ -1,0 +1,37 @@
+<div class="info-top">
+    <div class="username-div">
+        <span class="username-span">
+            {{status.username}}
+        </span>
+    </div>
+
+    <languagebutton-place></languagebutton-place>
+
+    <div class="exit-div" (click)="onExitClick()">
+        <span class="exit-span">Выход</span>
+    </div>
+</div>
+
+<div class="role">
+    <span>Роль: </span>
+    <span>{{status.userrole}}</span>
+</div>
+
+<table class="left-div">
+    <tr class="item-div" *ngFor="let item of leftArray">
+        <td class="item-label">{{item.label}}</td>
+        <td class="item-count">{{item.count}}</td>
+    </tr>
+</table>
+
+<table class="right-div">
+    <tr class="item-div" *ngFor="let item of rightArray">
+        <td class="item-label">{{item.label}}</td>
+        <td class="item-count">{{item.count}}</td>
+    </tr>
+</table>
+
+<br>
+
+<div class="left-chart"  id="chart-left"></div>
+<div class="right-chart" id="chart-right"></div>

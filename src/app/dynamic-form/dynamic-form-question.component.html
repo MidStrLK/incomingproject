@@ -1,0 +1,92 @@
+<div [formGroup]="form" class="container example-form">
+    <!--<label [attr.for]="question.key">{{question.label}}</label>-->
+
+    <div [ngSwitch]="question.controlType">
+
+        <!--<div class="group"  *ngSwitchCase="'textbox'">
+            <input *ngSwitchCase="'textbox'" [formControlName]="question.key"
+                   [id]="question.key" [type]="question.type" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>{{question.label}}</label>
+        </div>-->
+
+
+<!--ТЕКСТ        -->
+        <mat-form-field class="example-full-width" *ngSwitchCase="'textbox'">
+            <input matInput
+                   [formControlName]="question.key"
+                   placeholder="{{question.label}}"
+                   value="{{question.value}}">
+
+            <mat-error *ngIf="form.controls[question.key].errors?.required">Поле обязательно</mat-error>
+            <mat-error *ngIf="form.controls[question.key].errors?.minlength">Минимальная длина {{form.controls[question.key].errors?.minlength.requiredLength}} символов</mat-error>
+            <mat-error *ngIf="form.controls[question.key].errors?.maxlength">Максимальная длина {{form.controls[question.key].errors?.minlength.requiredLength}} символов</mat-error>
+        </mat-form-field>
+
+<!--ЧИСЛО-->
+        <mat-form-field class="example-full-width" *ngSwitchCase="'numberfield'">
+            <input matInput
+                   type="number"
+                   [formControlName]="question.key"
+                   name="{{getName()}}"
+                   placeholder="{{question.label}}"
+                   value="{{question.value}}">
+
+            <mat-error *ngIf="form.controls[question.key].errors?.required">Поле обязательно</mat-error>
+            <mat-error *ngIf="getErrorName() === 'min'">Минимально - {{getErrorText('min')}}</mat-error>
+            <mat-error *ngIf="getErrorName() === 'max'">Максимально - {{getErrorText('max')}}</mat-error>
+        </mat-form-field>
+
+        <!--[required]="isRequiredTest"-->
+
+<!--ЧЕКБОКС-->
+        <mat-checkbox
+            class="mat-checkbox-top"
+            *ngSwitchCase="'checkbox'"
+            [formControlName]="question.key">
+            {{question.label}}
+        </mat-checkbox>
+
+
+<!--ТЕКСТ АРЕА-->
+        <mat-form-field *ngSwitchCase="'textarea'">
+            <textarea matInput [formControlName]="question.key" placeholder="{{question.label}}" value="{{question.value}}" minlength="4"></textarea >
+        </mat-form-field>
+
+
+<!--ДАТА        -->
+        <mat-form-field  *ngSwitchCase="'date'">
+            <input matInput
+                   [formControlName]="question.key"
+                   [matDatepicker]="picker"
+                   placeholder="{{question.label}}"
+                   value="{{question.value}}"
+                   min="{{question.minDate}}"
+                   max="{{question.maxDate}}"
+                   name="{{getName()}}"
+                   disabled>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker disabled="false"></mat-datepicker>
+
+            <mat-error *ngIf="form.controls[question.key].errors?.required">Поле обязательно</mat-error>
+            <mat-error *ngIf="getErrorName() === 'minDate'">Минимально - {{getErrorText('minDate')}}</mat-error>
+            <mat-error *ngIf="getErrorName() === 'maxDate'">Максимально - {{getErrorText('maxDate')}}</mat-error>
+
+        </mat-form-field>
+
+<!--<mat-error *ngIf="form.controls[question.key].errors?.max">Максимально - {{getErrorText('max')}}</mat-error>-->
+
+<!--СЕЛЕКТ        -->
+        <mat-form-field *ngSwitchCase="'dropdown'">
+            <mat-select placeholder="{{question.label}}" [formControlName]="question.key">
+                <mat-option *ngFor="let opt of question.options" [value]="opt.key">
+                    {{ opt.value }}
+                </mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="form.controls[question.key].errors?.required">Поле обязательно</mat-error>
+        </mat-form-field>
+
+    </div>
+</div>

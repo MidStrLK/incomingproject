@@ -1,0 +1,84 @@
+@import "../../styles/palette";
+@import "../../styles/dimensions";
+
+$input-border-radius: 5px;
+
+.wrapper{
+  width:  100%;
+  padding: $filter-input-place-padding;
+  height: $filter-input-place-height;
+}
+
+.input-div{
+  overflow: hidden;
+  //padding-right: .5em;
+}
+
+.filter-input {
+  width: 100%;
+  height: $filter-input-height;
+  font-size: $filter-input-font-size;
+  font-family: Roboto, sans-serif;
+  border: 2px solid $filter-button-background-color;
+  border-radius: $input-border-radius 0 0 $input-border-radius;
+  outline:none;
+  padding-left: 3px;
+  z-index: $z-index-filter-input;
+  position: relative;
+
+  &::-webkit-input-placeholder {font-size: $filter-input-placeholder-font-size}
+  &::-moz-placeholder          {font-size: $filter-input-placeholder-font-size}/* Firefox 19+ */
+  &:-moz-placeholder           {font-size: $filter-input-placeholder-font-size}/* Firefox 18- */
+  &:-ms-input-placeholder      {font-size: $filter-input-placeholder-font-size}
+}
+
+.filter-input-top,
+.clear-input-button-top{
+  z-index: $z-index-filter-input-top !important;
+}
+
+.filter-button {
+  float: right;
+  cursor: pointer;
+  color: $filter-button-text-color;
+  background-color: $filter-button-background-color;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: color 0.2s ease;
+
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  position: relative;
+  width: $filter-input-button-width;
+  z-index: $z-index-filter-input;
+  height: $filter-input-button-height;
+
+  padding-top: 5px;
+  padding-left: 2px;
+
+  border-radius: 5px;
+}
+
+.button-is-disabled,
+.clear-button-is-disabled{
+  opacity: 0.5;
+}
+
+.clear-input-button{
+  width: $filter-input-height;
+  height: $filter-input-height;
+  background-color: $filter-button-background-color;
+  color: white;
+  margin-right: 10px;
+  z-index: $z-index-filter-input;
+  border-radius: 0 $input-border-radius $input-border-radius 0;
+}
+
+
+.filter-button:hover{
+  background-color: $filter-button-background-color-hover;
+  color: $filter-button-text-color-hover;
+}

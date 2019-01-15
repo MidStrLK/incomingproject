@@ -1,0 +1,11 @@
+<div class="modal {{modalclass}} modal-{{modal_window_type}}" *ngIf="is_open_window" (click)="closeModalWindow($event)">
+
+    <!-- Modal content -->
+    <div class="modal-content content-{{modalclass}} content-{{modal_window_type}}" (click)="closeModalWindow($event, true)">
+        <div class="message-template" *ngFor="let item of messages">
+            <h1>{{item.header}}</h1>
+            <span>{{item.text}}</span>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,90 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+/* HEIGHTS */
+/* Z-INDEXES */
+/* FILTERS */
+/* FILTER-INPUT */
+/* SERVICES-MENU */
+/* USER */
+.wrapper {
+  width: 100%;
+  padding: 10px;
+  height: 50px; }
+
+.input-div {
+  overflow: hidden; }
+
+.filter-input {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  border: 2px solid #0097A7;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  padding-left: 3px;
+  z-index: 1;
+  position: relative;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  .filter-input::-webkit-input-placeholder {
+    font-size: 13.33333px; }
+  .filter-input::-moz-placeholder {
+    font-size: 13.33333px; }
+  .filter-input:-moz-placeholder {
+    font-size: 13.33333px; }
+  .filter-input:-ms-input-placeholder {
+    font-size: 13.33333px; }
+
+.filter-input-top,
+.clear-input-button-top {
+  z-index: 6 !important; }
+
+.filter-button {
+  float: right;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #0097A7;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: color 0.2s ease;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  position: relative;
+  width: 30px;
+  z-index: 1;
+  height: 30px;
+  padding-top: 5px;
+  padding-left: 2px;
+  border-radius: 5px; }
+
+.button-is-disabled,
+.clear-button-is-disabled {
+  opacity: 0.5; }
+
+.clear-input-button {
+  width: 30px;
+  height: 30px;
+  background-color: #0097A7;
+  color: white;
+  margin-right: 10px;
+  z-index: 1;
+  border-radius: 0 5px 5px 0; }
+
+.filter-button:hover {
+  background-color: #00BCD4;
+  color: #FFFFFF; }
+
+/*# sourceMappingURL=filter_input.component.css.map */

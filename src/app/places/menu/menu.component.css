@@ -1,0 +1,90 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+/* HEIGHTS */
+/* Z-INDEXES */
+/* FILTERS */
+/* FILTER-INPUT */
+/* SERVICES-MENU */
+/* USER */
+h1, a, li {
+  font-family: Roboto, sans-serif; }
+
+a, li {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+.menu-wrap {
+  background-color: #00BCD4;
+  width: 100%; }
+
+.menu-place {
+  width: 70%;
+  float: left; }
+
+.user-place {
+  width: 30%;
+  background-color: #00BCD4;
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: 50px; }
+
+.nav {
+  background-color: #00BCD4;
+  margin: 0;
+  padding: 0; }
+  .nav > li {
+    display: inline-block;
+    padding: 1em 18px;
+    cursor: pointer; }
+    .nav > li:hover {
+      background-color: #0097A7; }
+      .nav > li:hover a {
+        color: #FFFFFF; }
+  .nav .selected {
+    background-color: #0097A7; }
+    .nav .selected a {
+      color: #FFFFFF; }
+
+.drop {
+  z-index: 2;
+  position: relative;
+  padding: 0; }
+  .drop ul {
+    position: absolute;
+    left: 0;
+    top: 51px;
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+    background-color: #00BCD4;
+    width: 120%; }
+    .drop ul li {
+      display: block;
+      width: 100%; }
+      .drop ul li:hover {
+        background-color: #0097A7; }
+        .drop ul li:hover a {
+          color: #FFFFFF; }
+      .drop ul li a {
+        width: 100%;
+        padding: 1em 18px;
+        display: inline-block;
+        white-space: pre;
+        box-sizing: border-box;
+        color: #FFFFFF; }
+  .drop:hover ul {
+    transform: scale(1); }
+
+/*# sourceMappingURL=menu.component.css.map */

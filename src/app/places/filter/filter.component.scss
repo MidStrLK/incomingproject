@@ -1,0 +1,30 @@
+@import "../../styles/palette";
+@import "../../styles/dimensions";
+
+.filter-button {
+  cursor: pointer;
+  color: $filter-button-text-color;
+  background-color: $filter-button-background-color;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: color 0.2s ease;
+
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+
+  position: relative;
+  width: $filter-width;
+  z-index: $z-index-filter-button;
+  right: $filter-right;
+  height: $tab-height;
+}
+
+.filter-button:hover{
+  background-color: $filter-button-background-color-hover;
+  color: $filter-button-text-color-hover;
+}

@@ -1,0 +1,76 @@
+@import "../../styles/palette";
+@import "../../styles/dimensions";
+
+.rightClickPanel {
+  //width:    $services-item-width;
+  position: absolute;
+  z-index:  $z-index-service-menu;
+  display:  block;
+
+  >ul{
+    padding:  0;
+    margin:   0;
+    list-style-type: none;
+
+    >li{
+      width:            100%;
+      height:           $services-item-height;
+      background-color: $services-item-background-color;
+      color:            $services-item-text-color;
+      font-family:      Roboto, sans-serif;
+      font-size:        16px;
+      text-align:       left;
+      padding:          0 15px;
+      line-height:      $services-item-height;
+
+      &:hover{
+        background-color: $services-item-background-color-hover;
+        color:            $services-item-text-color-hover;
+      }
+    }
+  }
+}
+
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0);
+  z-index: 5;
+}
+
+/*
+.service-button {
+  cursor: pointer;
+  color: $filter-button-text-color;
+  background-color: $filter-button-background-color;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: color 0.2s ease;
+
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+
+  position: relative;
+  width: $filter-width;
+  z-index: $z-index-filter-button;
+  right: $filter-right;
+  height: $tab-height;
+}
+
+.service-button:hover{
+  background-color: $filter-button-background-color-hover;
+  color: $filter-button-text-color-hover;
+}
+*/
+
+

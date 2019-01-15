@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+<fa name="cog" animation="spin"></fa>
+
+name	    String	  F-A Icons
+size	    String	  lg, 2x, 3x, 4x, 5x
+fixed	    Boolean	  true	  false
+animation	String	  spin	  pulse
+rotate	    Number	  String  90
+inverse	    Boolean	  true	  false
+*/
+
+
+
+
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "app/styles/palette";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
+  overflow: hidden;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+table{
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+button {
+  outline: none;
+}

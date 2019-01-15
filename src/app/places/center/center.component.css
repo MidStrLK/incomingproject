@@ -1,0 +1,126 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+/* HEIGHTS */
+/* Z-INDEXES */
+/* FILTERS */
+/* FILTER-INPUT */
+/* SERVICES-MENU */
+/* USER */
+.table, .row, .cell {
+  outline: none;
+  border: none;
+  outline-style: none;
+  vertical-align: top;
+  text-align: left; }
+
+.table {
+  border-collapse: collapse;
+  display: table;
+  table-layout: fixed;
+  /* This will ensure the cells within the table will keep there width. */
+  width: 100%;
+  height: 100%; }
+
+td {
+  padding: 0; }
+
+.filter-row,
+.tab-row,
+.central-row,
+.summary-row {
+  display: none;
+  width: 100%; }
+
+.showCenter {
+  display: table-row; }
+
+.cell {
+  display: table-cell;
+  white-space: nowrap;
+  /* This property is used to show ellipses, when the content within de cell is overflown. */
+  overflow: hidden;
+  /* This property is used to show ellipses, when the content within de cell is overflown. */
+  -ms-text-overflow: ellipsis;
+  /* This property is used to show ellipses, when the content within de cell is overflown. */
+  -o-text-overflow: ellipsis;
+  /* This property is used to show ellipses, when the content within de cell is overflown. */
+  text-overflow: ellipsis;
+  /* This property is used to show ellipses, when the content within de cell is overflown. */ }
+
+.menu-row {
+  height: 50px; }
+
+.menu-cell {
+  overflow: visible; }
+
+.filter-row {
+  width: 100%; }
+
+.tab-row {
+  height: 50px;
+  background-color: #B2EBF2; }
+
+.tab-cell {
+  text-align: center;
+  overflow: visible;
+  vertical-align: bottom; }
+
+.central-row {
+  height: 100%; }
+
+.filter-cell {
+  width: 350px;
+  border: 1px solid #000000; }
+
+.center-cell {
+  border: 1px solid #000000;
+  height: 100%; }
+
+.center-div {
+  position: relative;
+  height: 100%; }
+
+.center-div > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.center-grid > div {
+  overflow-y: scroll; }
+
+.service-cell {
+  width: 80px;
+  border: 1px solid #000000; }
+
+.summary-row {
+  height: 30px;
+  background-color: #00BCD4; }
+
+.summary-cell {
+  vertical-align: middle;
+  text-align: center;
+  height: 30px; }
+
+.options-button {
+  float: right; }
+
+.inline {
+  display: inline-block; }
+
+.tab-table {
+  width: 100%;
+  height: 50px; }
+
+/*# sourceMappingURL=center.component.css.map */

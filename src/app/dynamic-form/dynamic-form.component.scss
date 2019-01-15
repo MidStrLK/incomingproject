@@ -1,0 +1,42 @@
+@import "../styles/palette";
+
+button {
+  cursor: pointer;
+  color: $button-text-color;
+  background-color: $button-background-color;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: color 0.2s ease;
+
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+
+  position: relative;
+  margin-bottom: 20px;
+  height: 40px;
+
+  &:hover{
+    background-color: $button-background-color-hover;
+    color: $button-text-color-hover;
+  }
+
+  &[disabled]{
+    opacity: .5;
+
+    &:hover{
+      background-color: $button-background-color;
+      color: $button-text-color;
+    }
+  }
+}
+
+
+.form-component{
+  float: left;
+  margin-right: 40px;
+}

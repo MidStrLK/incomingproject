@@ -1,0 +1,55 @@
+<div class="login-div">
+    <div class="left-div">
+        <form (ngSubmit)="onSubmit()" class="login-form">
+
+            <mat-form-field class="login-field">
+                <input matInput
+                       [(ngModel)]="data.login"
+                       name="login"
+                       placeholder="Логин">
+            </mat-form-field>
+
+
+
+            <br>
+
+            <mat-form-field class="login-field">
+                <input matInput
+                       [(ngModel)]="data.password"
+                       name="password"
+                       placeholder="Пароль"
+                       type="password">
+            </mat-form-field>
+
+            <mat-checkbox
+                    class="login-save"
+                    [(ngModel)]="savelogin"
+                    [ngModelOptions]="{standalone: true}"
+                    checked="savelogin">
+                Запомнить меня
+            </mat-checkbox>
+
+            <br>
+
+            <div class="error-div" *ngIf="isError">
+                <span class="error-span">
+                    {{error_text}}
+                </span>
+            </div>
+
+            <button md-button
+                    class="submit-btn"
+                    type="submit"
+                    [disabled]="!isValid"
+                    [class.disabled-btn]="!isValid">
+                Логин
+            </button>
+
+        </form>
+    </div>
+
+
+    <div class="right-div">
+
+    </div>
+</div>

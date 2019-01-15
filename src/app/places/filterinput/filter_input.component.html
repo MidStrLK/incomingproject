@@ -1,0 +1,41 @@
+<div class="wrapper" *ngIf="showFilterButton">
+
+    <a href="#"
+       class="filter-button"
+       (click)="onFilterButtonClick()"
+       [class.button-is-disabled]="isButtonDisabled()"
+       [class.filter-input-top]="filter_input_top">
+        <fa name="search" size="lg"></fa>
+    </a>
+
+    <a href="#"
+       class="filter-button clear-input-button"
+       (click)="onClearInputClick($event)"
+       [class.clear-button-is-disabled]="isClearButtonDisabled"
+       [class.clear-input-button-top]="clear_input_button_top">
+        <fa name="times" size="lg"></fa>
+    </a>
+
+    <!--<input type="submit" value="" class="filter-button {{filter_input_top}}" (click)="onFilterButtonClick()" />-->
+    <div class="input-div">
+        <input [(ngModel)]="input_value"
+               type="text"
+               class="filter-input"
+               (click)="onFilterInputClick()"
+               placeholder="{{placeholder}}"
+               (keyup)="onKey($event)"
+               [class.filter-input-top]="filter_input_top"/>
+    </div>​
+
+</div>
+
+
+<!--<div class="input-wide">
+    <input class="filter-input">
+</div>
+<button class="options-button filter-button" (click)="onFilterButtonClick()" >&#11206;</button>-->
+<!--<button class="options-button filter-button" (click)="onFilterButtonClick()" *ngIf="showFilterButton">&#11206;</button>-->
+
+<modal_window [modal_window_type]="modal_window_type" [questions]="questions"></modal_window>
+
+<!--[ngClass]="{'button-is-disabled': !isButtonEnableded, 'button-is-enabled': isButtonEnableded}"-->

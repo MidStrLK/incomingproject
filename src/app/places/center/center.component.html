@@ -1,0 +1,40 @@
+<div class="table">
+
+    <div class="row menu-row">
+        <menu-place></menu-place>
+    </div>
+
+    <div class="row central-row"
+         [class.showCenter]="!showCenterGrid">
+        <div class="center-div center-info">
+            <div>
+                <info-place></info-place>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row filter-row"
+         [class.showCenter]="showCenterGrid">
+        <filter-input-place></filter-input-place>
+    </div>
+
+    <div class="row tab-row"
+         [class.showCenter]="showCenterGrid">
+        <tab-place></tab-place>
+    </div>
+
+    <div class="row central-row"
+         [class.showCenter]="showCenterGrid">
+        <div class="center-div center-grid">
+            <div>
+                <grid-place></grid-place>
+            </div>
+        </div>
+    </div>
+
+    <div class="row summary-row"
+         [class.showCenter]="showCenterGrid">
+        <summary-place></summary-place>
+    </div>
+</div>

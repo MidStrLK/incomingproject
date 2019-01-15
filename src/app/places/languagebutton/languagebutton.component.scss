@@ -1,0 +1,23 @@
+@import "../../styles/palette";
+
+.language-button-div{
+  //position: absolute;
+  //top: 10px;
+  //right: 10px;
+  width: 30px;
+  height: 20px;
+  border: 1px solid $languagebutton-border;
+  background-color: $languagebutton-backgraund-color;
+
+  margin: 6px 40px 0 40px;
+
+  float: left;
+  cursor: pointer;
+
+  >.language-button-span{
+    font-size: 16px;
+    margin: 4px;
+    color: $languagebutton-color;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,44 @@
+/* HEIGHTS */
+$header-height:   50px;
+$tab-height:      50px;
+$summary-height:  30px;
+
+$additive:        3px;
+
+/* Z-INDEXES */
+$z-index-tab-radiobutton:    -1;
+$z-index-grid-header-cell:    1;
+$z-index-menu:                2;
+$z-index-filter-modal:        3;
+$z-index-editor-modal:        4;
+$z-index-filter-button:       4;
+$z-index-filter-input-modal:  5;
+$z-index-filter-input:        1;
+$z-index-filter-input-top:    $z-index-filter-input-modal + 1;
+$z-index-service-menu:        4;
+
+
+/* FILTERS */
+$filter-width:      220px;
+$filter-right:       10px;
+$modal-padding-top: $header-height + $tab-height + $additive;
+
+/* FILTER-INPUT */
+$filter-input-place-height:           50px;
+$filter-input-height:                 30px;
+$filter-input-font-size:             ($filter-input-height)*2/3;
+$filter-input-placeholder-font-size: ($filter-input-font-size)*2/3;
+$filter-input-place-padding:         ($filter-input-place-height - $filter-input-height)/2;
+$filter-input-button-height:          $filter-input-height;
+$filter-input-button-width:           $filter-input-height;
+
+$filter-input-modal-margin-top:       $header-height + 1px;
+$filter-input-modal-padding-top:      $filter-input-height + $filter-input-place-padding + 10px;
+
+/* SERVICES-MENU */
+$services-item-width: 200px;
+$services-item-height: 40px;
+
+
+/* USER */
+$user-margin-top: $header-height + $additive;

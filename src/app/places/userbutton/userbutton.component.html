@@ -1,0 +1,24 @@
+<div class="user-button-div"
+     *ngIf="status"
+     (click)="onButtonClick()"
+     [class.userbutton-hover]="userbuttonHover">
+    <span class="user-button-span">
+        {{status.username}}
+    </span>
+</div>
+
+<div class="modal" *ngIf="is_open_window" (click)="closeModalWindow($event)" (mouseover)="closeModalWindow()">
+
+    <div class="modal-content" (click)="closeModalWindow($event, true)" (mouseover)="$event.stopPropagation()">
+
+        <div class="user-name-div">
+            <!--<span class="user-name-span">{{currentUser}}</span>-->
+        </div>
+
+        <div class="exit-div" (click)="onExitClick()">
+            <span class="exit-span">Выход</span>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+<!--<button class="options-button service-button" (click)="onServiceButtonClick()" *ngIf="showServiceButton">Сервисы &#11206;</button>-->
+
+<div class="modal"
+     *ngIf="is_open_window"
+     (click)="closeModalWindow($event)"
+     (contextmenu)="closeModalWindow($event)">
+    <div class="rightClickPanel"
+         *ngIf="showContextMenu"
+         [ngStyle]="contextMenuStyle"
+         (click)="clickPanel($event)"
+         (contextmenu)="clickPanel($event)">
+        <ul class="services-ul" >
+            <li
+                    class="services-item"
+                    *ngFor="let serv of services"
+                    (click)="onServiceClick($event, serv)">
+                {{serv.label}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--(contextmenu)="rightClick($event)"-->

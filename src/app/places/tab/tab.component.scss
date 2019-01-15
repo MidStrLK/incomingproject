@@ -1,0 +1,131 @@
+@import "../../styles/palette";
+@import "../../styles/dimensions";
+
+/*$tab-item-background-color:          $accent-color;
+$tab-item-background-color-hover:    $accent-color;
+$tab-item-text-color:                $primary-color-text;
+$tab-item-text-color-hover:          $secondary-text-color;*/
+
+$num-of-tabs: 4;
+
+@mixin tabs {
+  @for $i from 1 through $num-of-tabs {
+    &:nth-of-type(#{$i}) {
+      &:checked {
+        ~ .slide {
+          //left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+        }
+      }
+    }
+  }
+}
+
+label, p, a, h1, div {
+  font-family: Roboto, sans-serif;
+}
+
+.tab-wrap {
+  width: 100%;
+  //margin-left: 20%;
+  position: relative;
+  display: flex;
+  //top: -106px;
+  height: 50px;
+  float: left;
+}
+
+.tab-element {
+  background-color: $tab-item-background-color;
+  :hover {
+    background-color: $tab-item-background-color-hover;
+    .slide {
+      background: $tab-item-color-slide;
+    }
+  }
+
+  .tab-label-content {
+    label {
+      padding: 0 10px;
+    }
+  }
+}
+
+input[type="radio"][name="tabs"] {
+  position: absolute;
+  z-index: $z-index-tab-radiobutton;
+  &:checked {
+    + .tab-label-content {
+      label {
+        color: white;
+      }
+      .tab-content {
+        display: block;
+      }
+    }
+  }
+  @include tabs;
+  &:first-of-type {
+    &:checked {
+      ~ .slide {
+        //left: 0;
+      }
+    }
+  }
+}
+
+
+
+label {
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  background-color: $tab-item-background-color;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.slide {
+  background: $tab-item-color-slide;
+  //width: 100%;
+  width: 90%;
+  padding: 0 5px;
+  height: 4px;
+  position: relative;
+  left: 0;
+  //top: -9px;
+  margin: -9px auto;
+  //margin-top: -9px;
+  transition: left 0.3s ease-out;
+  :hover {
+    background: $tab-item-color-slide;
+  }
+}
+
+
+.tab-label-content {
+  width: 100%;
+  .tab-content {
+    position: absolute;
+    top: 100px;
+    left: 16px;
+    line-height: 130%;
+    display: none;
+  }
+}
+
+/*
+@media screen and (max-width: 800px) {
+  h1 {
+    padding: 40px 0 90px 10%;
+  }
+  .tab-wrap {
+    width: 80%;
+    margin-left: 10%;
+    top: -106px;
+  }
+}*/

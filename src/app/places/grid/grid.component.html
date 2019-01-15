@@ -1,0 +1,53 @@
+<mat-table #table [dataSource]="dataSource" (keyup)="onKey($event)">
+    <ng-container *ngFor="let column of columns" matColumnDef="{{column.name}}">
+
+        <mat-header-cell
+                *matHeaderCellDef
+                class="header-row"
+                id="column-id-{{column.name}}"
+                (click)="onHeaderRowClick($event, column.name)">
+
+            <mat-checkbox *ngIf="column.name == 'row-checkbox'"
+                          (change)="$event ? masterToggle() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+
+            <!--<mat-checkbox type="checkbox" name="allonoffswitch" class="row-checkbox header-row-checkbox" *ngIf="column.name == 'row-checkbox'" (click)="onHeaderCheckboxClick($event)"></mat-checkbox>-->
+            <div class="header-label" *ngIf="column.name != 'row-checkbox'">{{column.label}}</div>
+            <div class="header-sort-direction"
+                 *ngIf="column.name != 'row-checkbox'"
+                 [ngClass]="{'header-sort-asc':  isAscDirection(column.name), 'header-sort-desc': isDescDirection(column.name)}">
+            </div>
+        </mat-header-cell>
+
+        <mat-cell *matCellDef="let row"
+                  (click)="onCellClick($event, row, column.name)"
+                  [class.cell-checkbox]="column.name == 'row-checkbox'"
+                  [class.selected-cell]="selection.selected.indexOf(row) !== -1">
+
+            <mat-checkbox *ngIf="column.name == 'row-checkbox'"
+                          (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+
+            <!--<mat-checkbox type="checkbox" name="onoffswitch" class="row-checkbox" *ngIf="column.name == 'row-checkbox'" (click)="onRowCheckboxClick($event, row)"></mat-checkbox>-->
+            <span *ngIf="column.name != 'row-checkbox'">{{ (row[column.name] && column.name.indexOf('date') !== -1) ? (row[column.name] | date:'dd.MM.yyyy') : row[column.name] }}</span>
+        </mat-cell>
+
+    </ng-container>
+
+    <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
+            *cdkRowDef="let row; columns: displayedColumns"
+            (click)="onRowClick(row)"
+            (dblclick)="onRowDblClick(row)"
+            [ngClass]="{'row-is-selected': isRowSelected(row.id)}"
+            (keyup)="onKey($event)"
+            (contextmenu)="openContextMenu($event, row)">
+    </mat-row>
+
+</mat-table>
+
+<modal_window [modal_window_type]="modal_window_type" [questions]="questions"></modal_window>

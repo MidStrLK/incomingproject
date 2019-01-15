@@ -1,0 +1,114 @@
+$color-scheme-array: 'indigo-teal', 'lime-brown', 'cyan-deep-orange';
+$color-scheme-number: 3;
+
+
+$color-scheme: nth($color-scheme-array ,$color-scheme-number);
+
+$primary-color-dark:   #303F9F;
+$primary-color:        #3F51B5;
+$primary-color-light:  #C5CAE9;
+$accent-color:         #009688;
+$divider-color:        #BDBDBD;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$primary-color-text:   #FFFFFF;
+
+/* INDIGO - TEAL */
+@if $color-scheme == 'indigo-teal'{
+  $primary-color-dark:   #303F9F;
+  $primary-color:        #3F51B5;
+  $primary-color-light:  #C5CAE9;
+  $accent-color:         #009688;
+  $divider-color:        #BDBDBD;
+
+  $primary-text-color:   #212121;
+  $secondary-text-color: #757575;
+  $primary-color-text:   #FFFFFF;
+}
+
+/* LIME - BROWN */
+@if $color-scheme == 'lime-brown' {
+  $primary-color-dark:   #AFB42B;
+  $primary-color:        #CDDC39;
+  $primary-color-light:  #F0F4C3;
+  $accent-color:         #795548;
+  $divider-color:        #BDBDBD;
+
+  $primary-text-color:   #212121;
+  $secondary-text-color: #757575;
+  $primary-color-text:   #212121;
+}
+
+/* CYAN - DEEP-ORANGE */
+@if $color-scheme == 'cyan-deep-orange' {
+  $primary-color-dark:   #0097A7;
+  $primary-color:        #00BCD4;
+  $primary-color-light:  #B2EBF2;
+  $accent-color:         #FF5722;
+  $divider-color:        #BDBDBD;
+
+  $primary-text-color:   #212121;
+  $secondary-text-color: #757575;
+  $primary-color-text:   #FFFFFF;
+}
+
+/* INFO */
+$info-color:                            $primary-color-dark;
+$info-hover-row-background-color-begin: $primary-color-light;
+$info-hover-row-background-color-end:   $primary-color-light;
+$info-hover-count-color:                $primary-text-color;
+
+/* MENU */
+$menu-item-background-color:            $primary-color;
+$menu-item-background-color-hover:      $primary-color-dark;
+$menu-item-text-color:                  $primary-color-text;
+$menu-item-text-color-hover:            $primary-color-text;
+$menu-item-selected-background-color:   $primary-color-dark;
+$menu-item-selected-text-color:         $primary-color-text;
+
+
+$userbutton-color:                      $primary-color-text;
+$userbutton-color-hover:                $primary-text-color;
+
+
+/* TABS */
+$tab-background-color:                  $primary-color-light;
+$tab-item-background-color:             $primary-color-dark;
+$tab-item-background-color-hover:       $primary-color;
+$tab-item-text-color:                   $primary-color-text;
+$tab-item-text-color-hover:             $secondary-text-color;
+$tab-item-color-slide:                  yellow;
+
+
+/* OTHERBUTTONS */
+$filter-button-background-color:        $primary-color-dark;
+$filter-button-background-color-hover:  $primary-color;
+$filter-button-text-color:              $primary-color-text;
+$filter-button-text-color-hover:        $primary-color-text;
+
+
+/* BUTTONS */
+$button-background-color:               $primary-color-dark;
+$button-background-color-hover:         $primary-color;
+$button-text-color:                     $primary-color-text;
+$button-text-color-hover:               $primary-color-text;
+
+
+/* MAIN GRID */
+$main-grid-background-color-hover:        $primary-color-light;
+$main-grid-selected-row-backgraund-color: $divider-color;
+$main-grid-hover-row-backgraund-color:    $accent-color;
+
+/* SUMMARY */
+$summary-backgroung-color:              $primary-color;
+
+/*SERVICE*/
+$services-item-background-color:        $primary-color-dark;
+$services-item-background-color-hover:  $primary-color;
+$services-item-text-color:              $primary-color-text;
+$services-item-text-color-hover:        $primary-color-text;
+
+/*LANGUAGE BUTOON*/
+$languagebutton-border:                 $primary-color-text;
+$languagebutton-backgraund-color:       $primary-color-dark;
+$languagebutton-color:                  $primary-color-text;

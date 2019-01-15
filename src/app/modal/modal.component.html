@@ -1,0 +1,12 @@
+<div class="modal {{modalclass}} modal-{{modal_window_type}}" *ngIf="is_open_window" (click)="closeModalWindow($event)">
+
+    <!-- Modal content -->
+    <div class="modal-content content-{{modalclass}} content-{{modal_window_type}}" (click)="closeModalWindow($event, true)">
+
+        <div class="content-margin">
+            <dynamic-form [questions]="questions" [modal_window_type]="modal_window_type"></dynamic-form>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+button {
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #0097A7;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: color 0.2s ease;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 20px;
+  height: 40px; }
+  button:hover {
+    background-color: #00BCD4;
+    color: #FFFFFF; }
+  button[disabled] {
+    opacity: .5; }
+    button[disabled]:hover {
+      background-color: #0097A7;
+      color: #FFFFFF; }
+
+.form-component {
+  float: left;
+  margin-right: 40px; }
+
+/*# sourceMappingURL=dynamic-form.component.css.map */

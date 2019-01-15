@@ -1,0 +1,27 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+.language-button-div {
+  width: 30px;
+  height: 20px;
+  border: 1px solid #FFFFFF;
+  background-color: #0097A7;
+  margin: 6px 40px 0 40px;
+  float: left;
+  cursor: pointer; }
+  .language-button-div > .language-button-span {
+    font-size: 16px;
+    margin: 4px;
+    color: #FFFFFF;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=languagebutton.component.css.map */

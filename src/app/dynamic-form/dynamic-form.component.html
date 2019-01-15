@@ -1,0 +1,21 @@
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+        <div class="form-row">
+            <button type="submit" class="button-apply" [disabled]="!form.valid"       *ngIf="show_apply_button">Применить</button>
+            <button type="button" class="button-clear" (click)="onButtonClearClick()" *ngIf="show_clear_button">Сбросить</button>
+            <button type="button" class="button-close" (click)="closeModalWindow()"   *ngIf="show_close_button">Закрыть</button>
+            <!--<button type="submit" [disabled]="!form.valid">Save</button>-->
+        </div>
+
+        <div *ngFor="let question of questions" class="form-row form-component">
+            <app-question [question]="question" [form]="form"></app-question>
+        </div>
+
+
+    </form>
+
+    <!--<div *ngIf="payLoad" class="form-row">-->
+        <!--<strong>Saved the following values</strong><br>{{payLoad}}-->
+    <!--</div>-->
+</div>

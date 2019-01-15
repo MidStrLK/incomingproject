@@ -1,0 +1,70 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+/* HEIGHTS */
+/* Z-INDEXES */
+/* FILTERS */
+/* FILTER-INPUT */
+/* SERVICES-MENU */
+/* USER */
+.login-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../../../img/login_bg.jpg) no-repeat;
+  background-size: cover; }
+  .login-div .left-div {
+    height: 100%;
+    width: 50%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.15);
+    min-width: 260px; }
+    .login-div .left-div .login-form {
+      width: 240px;
+      margin: 50% auto;
+      background-color: white;
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.28); }
+      .login-div .left-div .login-form .login-field {
+        width: 200px; }
+      .login-div .left-div .login-form .login-save {
+        margin-bottom: 10px; }
+      .login-div .left-div .login-form .error-div {
+        margin: 10px 0 0 0; }
+        .login-div .left-div .login-form .error-div .error-span {
+          color: red; }
+      .login-div .left-div .login-form .submit-btn {
+        cursor: pointer;
+        color: #FFFFFF;
+        background-color: #0097A7;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+        transition: color 0.2s ease;
+        border: none;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        width: 200px;
+        z-index: 4;
+        right: 10px;
+        height: 50px; }
+      .login-div .left-div .login-form .disabled-btn {
+        opacity: 0.5; }
+  .login-div .right-div {
+    float: left;
+    height: 100%;
+    width: 50%; }
+
+/*# sourceMappingURL=auth.component.css.map */

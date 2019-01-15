@@ -1,0 +1,25 @@
+<table class="menu-wrap" *ngIf="menuItems.length">
+    <tr>
+    <td class="menu-place">
+        <ul class="nav">
+            <li *ngFor="let item of menuItems"
+                [class.drop]="item.items"
+                [class.selected]="item.name === selectedMenuItem"
+                (click)="onMenuItemClick(item)">
+            <!--<li [style.background-color]="getMenuItemStyle(item)" *ngFor="let item of menuItems" class="item.items ? drop : notdrop" (click)="onMenuItemClick(item)">-->
+                <a href="#">{{item.label}}</a>
+
+                <ul class="drop" *ngIf="item.items">
+                    <li  *ngFor="let subitem of item.items">
+                        <a href="#"  (click)="onMenuItemClick(subitem, item)">{{subitem.label}}</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </td>
+    <td class="user-place">
+        <userbutton-place></userbutton-place>
+    </td>
+    </tr>
+</table>

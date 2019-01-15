@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAeA,mBAAmB;AAanB,kBAAkB;AAalB,wBAAwB;AAaxB,UAAU;AAMV,UAAU;AAaV,UAAU;AASV,kBAAkB;AAOlB,aAAa;AAOb,eAAe;AAKf,aAAa;AAGb,WAAW;AAMX,mBAAmB;AC5GnB,oBAAoB;EAIlB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,iBAAgC;EACxC,gBAAgB,EDuGsB,OAAmB;ECrGzD,MAAM,EAAE,eAAe;EAEvB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,OAAO;EAEf,4CAAsB;IACpB,SAAS,EAAE,IAAI;IACf,MAAM,EAAE,GAAG;IACX,KAAK,ED8F+B,OAAmB;IC7FvD,cAAc,EAAE,SAAS",
+"sources": ["../../styles/palette.scss","languagebutton.component.scss"],
+"names": [],
+"file": "languagebutton.component.css"
+}

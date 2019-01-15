@@ -1,0 +1,42 @@
+/* INDIGO - TEAL */
+/* LIME - BROWN */
+/* CYAN - DEEP-ORANGE */
+/* INFO */
+/* MENU */
+/* TABS */
+/* OTHERBUTTONS */
+/* BUTTONS */
+/* MAIN GRID */
+/* SUMMARY */
+/*SERVICE*/
+/*LANGUAGE BUTOON*/
+/* HEIGHTS */
+/* Z-INDEXES */
+/* FILTERS */
+/* FILTER-INPUT */
+/* SERVICES-MENU */
+/* USER */
+.filter-button {
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #0097A7;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: color 0.2s ease;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  position: relative;
+  width: 220px;
+  z-index: 4;
+  right: 10px;
+  height: 50px; }
+
+.filter-button:hover {
+  background-color: #00BCD4;
+  color: #FFFFFF; }
+
+/*# sourceMappingURL=filter.component.css.map */
